@@ -1,0 +1,16 @@
+The directory structure is as follows:
+
+  [insert tree]
+
+The root directory will contain README.md.
+
+The src directory will contain 3 folders for the seperate program parts and
+one folder that will contain shared program files.
+
+There is a doc folder for documentation.
+
+There is a ref folder for any reference material and a lib folder for
+shared libraries used for the program.
+
+There is a scripts directory for any scripts used in the creation of the
+program.

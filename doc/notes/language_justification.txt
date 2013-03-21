@@ -1,0 +1,10 @@
+The event creation program is text based, compolsory?
+Bitch to create UIs in C
+It also seems fairly linear, which is best in procedural programming.
+But the event manager is done already?
+
+Checkpoint manager needs a UI (easiest in java). it also needs to represent
+many "objects".
+
+needs to represent objects but is text based. would benifit from oo but no
+need for UI.
