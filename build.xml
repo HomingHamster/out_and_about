@@ -1,0 +1,23 @@
+<project>
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/cp_manager/classes"/>
+        <javac includeantruntime="false" srcdir="src" destdir="build/cp_manager/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/cp_manager/jar"/>
+        <jar destfile="bin/checkpoint_manager.jar" basedir="build/cp_manager/classes">
+            <manifest>
+                <attribute name="Main-Class" value="gui.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="bin/checkpoint_manager.jar" fork="true"/>
+    </target>
+</project>

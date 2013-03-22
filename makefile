@@ -1,4 +1,10 @@
-all: event_creation
+#makefile - author fef
+
+main: checkpoint_manager event_creation
+
+checkpoint_manager:
+	ant compile
+	ant jar
 
 event_creation: event_creation_menu src/event_creation/main.c
 	gcc -Wall build/event_creation_menu.o src/event_creation/main.c -o bin/event_creation -std=c99
