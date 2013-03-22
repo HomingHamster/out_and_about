@@ -19,9 +19,12 @@ public class CheckpointMenu extends JMenuBar{
 	private JMenuItem medical_mode = new JMenuItem("Change to Medical Mode");
 	private JMenuItem time_mode = new JMenuItem("Change to Time Mode");
 
-	public CheckpointMenu(){
+	public CheckpointMenu(CheckpointFrame baseFrame, 
+		MedicalPanel medicalPanel, TimePanel timePanel){
 		// instantiate listener
-		CheckpointMenuListener listener = new CheckpointMenuListener();
+		CheckpointMenuListener listener = 
+				new CheckpointMenuListener(baseFrame, 
+								medicalPanel, timePanel);
 		this.add(file);
 		this.add(checkpoint);
 

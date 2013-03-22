@@ -15,8 +15,11 @@ public class CheckpointFrame extends JFrame {
 		//is closed.
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		MedicalPanel medicalPanel = new MedicalPanel();
+		TimePanel timePanel = new TimePanel();
+
 		//set the menu as the one defined in CheckpointMenu
-		JMenuBar menuBar = new CheckpointMenu();
+		JMenuBar menuBar = new CheckpointMenu(this, medicalPanel, timePanel);
 		setJMenuBar(menuBar);
 
 		//set the window properties
@@ -25,7 +28,7 @@ public class CheckpointFrame extends JFrame {
 
 		//create panel from class and add to frame.
 		// CheckpointPanel checkpointpanel = new CheckpointPanel();
-		add(new MedicalPanel());
+		add(timePanel);
 
 		// set app title and make visible.
 		setTitle("Checkpoint Manager Application");
