@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage[cm]{fullpage}
+\begin{document}
+\title{Initial Documentation for the Out and About Project}
+\author{Felix Farquharson - fef}
+\maketitle{}
+
+\tableofcontents{}
+
+\section{Event Creation program}
+I decided to do this part of the project in the C programming 
+language because it seemed the most linear part. There is a seperate
+file for the menu. The header files are stored centrally. It's built 
+by a general make file that builds the whole program.
+
+\subsection{The main.c file}
+The main.c file contains in infinate loop that will only ever end
+when the menu returns 1, which means it's exited.
+\lstinputlisting{../src/event_creation/main.c}
+
+\subsection{The menu.c file}
+The menu.c file contains all of the logic to display the menu and
+to take input from the user. It presents a formatted output and
+waits for the user to enter a letter before evaluating that letter
+and running the relevant code block.
+\lstinputlisting{../src/event_creation/menu.c}
+
+\subsection{The menu.h file}
+The menu.h file is in seperate directory to keep the src folder tidy.
+It's used from the main.c file to include the menu.
+\lstinputlisting{../src/event_creation/h/menu.h}
+
+\section{The Checkpoint Manager program}
+The checkpoint manager program is written in java. Java seemed the
+easiest of the three languages to write a UI in hence the choice.
+There are seperate directories to hold the ui and the data code, 
+this helps with organisation. The UI is written in Java Swing.
+
+\subsection{The Main.java file}
+The Main.java file checks that the correct arguments have been
+given to run the application, it will then store the locations
+because they are parsed later. The last thing it does is to 
+start an instance of the CheckpointFrame class to display the UI.
+\lstinputlisting{../src/checkpoint_manager/gui/Main.java}
+
+\subsection{The CheckpointFrame.java file}
+The CheckpointFrame.java file holds the base frame for the UI
+it sets the size, title, adds the menubar and action on close.
+it passes instances of the medical panel and time panel so they
+can be swapped later when the user needs a different screen.
+\lstinputlisting{../src/checkpoint_manager/gui/CheckpointFrame.java}
+
+\subsection{The CheckpointMenu.java file}
+The CheckpointManu.java file holds all of the buttons for the menu
+bar and it assigns listeners defined in another class to the menu.
+\lstinputlisting{../src/checkpoint_manager/gui/CheckpointMenu.java}
+
+\subsection{The CheckpointMenuListener.java file}
+The CheckpointMenuListener.java contains all the actions to be 
+performed when the buttons on the menu are clicked. Most notably
+the actions to be performed to change the view from medical view to
+time view.
+\lstinputlisting{../src/checkpoint_manager/gui/CheckpointMenuListener.java}
+
+
+\end{document}
