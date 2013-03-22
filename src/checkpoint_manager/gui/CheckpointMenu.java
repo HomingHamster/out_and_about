@@ -34,6 +34,9 @@ public class CheckpointMenu extends JMenuBar{
 		checkpoint.add(medical_mode);
 		medical_mode.addActionListener(listener);
 
+		checkpoint.add(time_mode);
+		time_mode.addActionListener(listener);
+
 		setVisible(true);
 	}
 }

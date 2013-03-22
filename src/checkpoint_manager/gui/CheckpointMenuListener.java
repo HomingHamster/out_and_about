@@ -17,10 +17,10 @@ public class CheckpointMenuListener implements ActionListener{
 			System.exit(0);
 		}
 	
-		else if (actionCommand.equals("Save")){
+		else if (actionCommand.equals("Change to Medical Mode")){
 		}
 	
-		else if (actionCommand.equals("Open")){
+		else if (actionCommand.equals("Change to Time Mode")){
 		}
 	}
 }

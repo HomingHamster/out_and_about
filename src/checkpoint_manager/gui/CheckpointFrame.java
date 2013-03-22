@@ -25,7 +25,7 @@ public class CheckpointFrame extends JFrame {
 
 		//create panel from class and add to frame.
 		// CheckpointPanel checkpointpanel = new CheckpointPanel();
-		// add(checkpointpanel);
+		add(new MedicalPanel());
 
 		// set app title and make visible.
 		setTitle("Checkpoint Manager Application");
