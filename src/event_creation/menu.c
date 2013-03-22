@@ -1,3 +1,6 @@
+//menu.c - author fef
+
+//include standard io library.
 #include <stdio.h>
 
 int menu() {
